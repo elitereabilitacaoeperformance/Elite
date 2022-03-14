@@ -48,6 +48,7 @@
       .then(response => {
         console.log(response)
         if (response == 'OK') {
+          thisForm.querySelector('.loading').classList.remove('d-block');
           thisForm.querySelector('.sent-message').classList.add('d-block');
           thisForm.reset();
         } else {
