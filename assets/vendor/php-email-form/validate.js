@@ -34,11 +34,14 @@
   function sendMessage(thisForm, obj) {
     const subject = obj.name + " - " + obj.subject;
     const message = `
-    <span>Email: ${obj.email} </span>
+    <span><b>Email:</b> ${obj.email} </span>
     <br> 
-    <span>Name: ${obj.name}</span>
+    <span><b>Nome:</b> ${obj.name}</span>
     <br> 
-    <span style="white-space: pre-wrap">Message: ${obj.message}</span>`
+    <span style="white-space: pre-wrap">Mensagem:\n\t ${obj.message}</span>
+    <br> 
+    <a href="mailto:${obj.email}">Responder</a>
+    `
     thisForm.querySelector('.loading').classList.add('d-block');
     Email.send({
       SecureToken: "895b2332-0b6e-4ba4-8681-7085b5d446c6",
