@@ -34,14 +34,16 @@
   function sendMessage(thisForm, obj) {
     const subject = obj.name + " - " + obj.subject;
     const message = `
-    <span>${obj.email} </span>
+    <span>Email: ${obj.email} </span>
     <br> 
-    <span>${obj.message}</span>`
+    <span>Name: ${obj.name}</span>
+    <br> 
+    <span style="white-space: pre-wrap">Message: ${obj.message}</span>`
     thisForm.querySelector('.loading').classList.add('d-block');
     Email.send({
-      SecureToken: "b24944df-e43b-4c65-9dbd-32292c5257d7",
+      SecureToken: "895b2332-0b6e-4ba4-8681-7085b5d446c6",
+      From: 'geral@elitereabilitacaoeperformance.com',
       To: 'elitereabilitacaoeperformance@gmail.com',
-      From: 'elitereabilitacaoeperformance@gmail.com',
       Subject: subject,
       Body: message
     })
