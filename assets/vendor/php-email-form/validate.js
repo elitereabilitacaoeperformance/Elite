@@ -38,9 +38,9 @@
     <br> 
     <span><b>Nome:</b> ${obj.name}</span>
     <br> 
-    <span style="white-space: pre-wrap">Mensagem:\n\t ${obj.message}</span>
+    <span style="white-space: pre-wrap"><b>Mensagem:</b>\n\n ${obj.message}</span>
     <br> 
-    <a href="mailto:${obj.email}">Responder</a>
+    <a href="mailto:${obj.email}?subject=${obj.subject}">Responder</a>
     `
     thisForm.querySelector('.loading').classList.add('d-block');
     Email.send({
